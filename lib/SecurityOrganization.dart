@@ -53,7 +53,6 @@ class SecurityOrganization extends StatelessWidget{
               const StaggeredTile.count(2, 2),
               const StaggeredTile.count(2, 2),
               const StaggeredTile.count(2, 2),
-              const StaggeredTile.count(2, 2),
             ],
           ),
         ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import '../Materials/Tile.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'RiskManagementAgenda.dart';
 
 class SecurityOrganizationLeadership extends StatelessWidget {
   
@@ -29,7 +30,7 @@ class SecurityOrganizationLeadership extends StatelessWidget {
             crossAxisSpacing: 4.0,
             children: <Widget>[
               new TileItem(new Tile(Colors.blue, FontAwesomeIcons.userCircle, 'Leadership Team', null, null)),
-              new TileItem(new Tile(Colors.orange, FontAwesomeIcons.save, 'Risk Management Agenda', null, null)),
+              new TileItem(new Tile(Colors.orange, FontAwesomeIcons.save, 'Risk Management Agenda', context, new MaterialPageRoute(builder: (_) => new RiskManagementAgenda()))),
               new TileItem(new Tile(Colors.yellow[800], FontAwesomeIcons.handPeace, 'Compliance Agenda', null, null)),
               new TileItem(new Tile(Colors.deepPurple[400], FontAwesomeIcons.thLarge, 'Strategic Agenda', null, null)),
               new TileItem(new Tile(Colors.grey[800], FontAwesomeIcons.fileAlt, 'Reporting Agenda', null, null)),

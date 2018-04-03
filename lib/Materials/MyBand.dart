@@ -17,7 +17,7 @@ class MyBand extends StatelessWidget {
 
     return new Container(
       margin: new EdgeInsets.only(top: 20.0),
-      height: 40.0,
+      height: 36.0,
       color: bandItem.color,
       child: new Row(
         children: <Widget>[

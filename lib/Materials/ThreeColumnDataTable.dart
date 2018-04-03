@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
-class TwoColumnItem {
+class ThreeColumnItem {
   String firstCol;
   String secCol;
+  String thirdCol;
 
-  TwoColumnItem(this.firstCol, this.secCol);
+  ThreeColumnItem(this.firstCol, this.secCol, this.thirdCol);
 }
 
-class TwoColumnDataTable extends StatelessWidget {
+class ThreeColumnDataTable extends StatelessWidget {
   final int rowNum;
   final String colName1;
   final String colName2;
-  final List<TwoColumnItem> items;
-  TwoColumnDataTable(this.rowNum, this.colName1, this.colName2, this.items);
+  final String colName3;
+  final List<ThreeColumnItem> items;
+  ThreeColumnDataTable(this.rowNum, this.colName1, this.colName2, this.colName3, this.items);
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +22,22 @@ class TwoColumnDataTable extends StatelessWidget {
       padding: new EdgeInsets.all(0.0),
       child: new Column(
         children: <Widget>[
+          new Container(
+            child: new Text('Header'),
+          ),
           //head row
           new Table(
             columnWidths: const <int, TableColumnWidth> {
-              0: const FixedColumnWidth(180.0),
-              1: const FixedColumnWidth(200.0),
+              0: const FixedColumnWidth(150.0),
+              1: const FixedColumnWidth(150.0),
+              2: const FixedColumnWidth(150.0),
             },
             children: [
               new TableRow(
                 children: [
                   new TableCell(child: new Text(colName1, style: new TextStyle(height: 3.0, fontWeight: FontWeight.bold))),
                   new TableCell(child: new Text(colName2, style: new TextStyle(height: 3.0, fontWeight: FontWeight.bold))),
+                  new TableCell(child: new Text(colName3, style: new TextStyle(height: 3.0, fontWeight: FontWeight.bold))),
                 ],
               ),
             ],
@@ -38,8 +45,9 @@ class TwoColumnDataTable extends StatelessWidget {
           //content
           new Table(
             columnWidths: const <int, TableColumnWidth> {
-              0: const FixedColumnWidth(200.0),
-              1: const FixedColumnWidth(200.0),
+              0: const FixedColumnWidth(150.0),
+              1: const FixedColumnWidth(150.0),
+              2: const FixedColumnWidth(150.0),
             },
             children: new List.generate(rowNum, (int index) {
               return new TableRow(
@@ -50,6 +58,7 @@ class TwoColumnDataTable extends StatelessWidget {
                     onTap: null,
                   )),
                   new TableCell(child: new Text(items[index].secCol, style: new TextStyle(height: 3.0))),
+                  new TableCell(child: new Text(items[index].thirdCol, style: new TextStyle(height: 3.0))),
                 ],
               );
             }),

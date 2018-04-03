@@ -15,8 +15,6 @@ class StaffDataTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-//    Size screenSize = MediaQuery.of(context).size;
-//    double width = screenSize.width;
 
     return new Padding(
       padding: new EdgeInsets.all(10.0),

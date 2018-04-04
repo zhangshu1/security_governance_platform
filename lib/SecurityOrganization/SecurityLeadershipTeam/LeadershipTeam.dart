@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../Materials/StaffDataTable.dart';
-import '../Bean/Person.dart';
+import '../../Materials/StaffDataTable.dart';
+import '../../Bean/Person.dart';
 
 class LeadershipTeam extends StatelessWidget {
 

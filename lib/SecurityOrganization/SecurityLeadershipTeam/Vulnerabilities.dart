@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../Materials/MyBand.dart';
-import '../Materials/TwoColumnDataTable.dart';
+import '../../Materials/MyBand.dart';
+import '../../Materials/TwoColumnDataTable.dart';
 
 void main() {
   runApp(new MaterialApp(

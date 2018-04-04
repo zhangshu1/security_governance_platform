@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import '../Materials/Tile.dart';
+import '../../Materials/Tile.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'RiskManagementAgenda.dart';
+import 'package:security_governance_platform/SecurityOrganization/SecurityLeadershipTeam/RiskManagementAgenda.dart';
+import '../../BlankPage.dart';
 
 class SecurityOrganizationLeadership extends StatelessWidget {
   
@@ -29,13 +30,13 @@ class SecurityOrganizationLeadership extends StatelessWidget {
             mainAxisSpacing: 4.0,
             crossAxisSpacing: 4.0,
             children: <Widget>[
-              new TileItem(new Tile(Colors.blue, FontAwesomeIcons.userCircle, 'Leadership Team', null, null)),
+              new TileItem(new Tile(Colors.blue, FontAwesomeIcons.userCircle, 'Leadership Team', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
               new TileItem(new Tile(Colors.orange, FontAwesomeIcons.save, 'Risk Management Agenda', context, new MaterialPageRoute(builder: (_) => new RiskManagementAgenda()))),
-              new TileItem(new Tile(Colors.yellow[800], FontAwesomeIcons.handPeace, 'Compliance Agenda', null, null)),
-              new TileItem(new Tile(Colors.deepPurple[400], FontAwesomeIcons.thLarge, 'Strategic Agenda', null, null)),
-              new TileItem(new Tile(Colors.grey[800], FontAwesomeIcons.fileAlt, 'Reporting Agenda', null, null)),
-              new TileItem(new Tile(Colors.green, FontAwesomeIcons.wrench, 'Operational Agenda', null, null)),
-              new TileItem(new Tile(Colors.red, FontAwesomeIcons.signInAlt, 'Ongoing Concerns', null, null)),
+              new TileItem(new Tile(Colors.yellow[800], FontAwesomeIcons.handPeace, 'Compliance Agenda', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.deepPurple[400], FontAwesomeIcons.thLarge, 'Strategic Agenda', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.grey[800], FontAwesomeIcons.fileAlt, 'Reporting Agenda', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.green, FontAwesomeIcons.wrench, 'Operational Agenda', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.red, FontAwesomeIcons.signInAlt, 'Ongoing Concerns', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
             ],
 
             staggeredTiles: const <StaggeredTile>[

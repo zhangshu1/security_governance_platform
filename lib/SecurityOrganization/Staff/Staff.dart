@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Bean/Person.dart';
+import '../../Bean/Person.dart';
 
 void main() => runApp(
   new MaterialApp(

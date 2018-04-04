@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'Materials/Tile.dart';
+import 'SelectEnterprise.dart';
+import 'BlankPage.dart';
 
 void main() => runApp(
   new MaterialApp(
@@ -35,12 +37,12 @@ class ExchangeMenu extends StatelessWidget{
             mainAxisSpacing: 4.0,
             crossAxisSpacing: 4.0,
             children: <Widget>[
-              new TileItem(new Tile(Colors.green, FontAwesomeIcons.connectdevelop, 'Management and Control', null, null)),
-              new TileItem(new Tile(Colors.amber[700], FontAwesomeIcons.sitemap, 'The Services', null, null)),
-              new TileItem(new Tile(Colors.deepPurple[400], FontAwesomeIcons.database, 'Data Dictionary', null, null)),
-              new TileItem(new Tile(Colors.teal[300], FontAwesomeIcons.users, 'Participating Enterprises', null, null)),
-              new TileItem(new Tile(Colors.amber[900], FontAwesomeIcons.whmcs, 'System Operations', null, null)),
-              new TileItem(new Tile(Colors.limeAccent[400], FontAwesomeIcons.industry, 'Participating Industries', null, null)),
+              new TileItem(new Tile(Colors.green, FontAwesomeIcons.connectdevelop, 'Management and Control', context, new MaterialPageRoute(builder: (_) => new SelectEnterprise()))),
+              new TileItem(new Tile(Colors.amber[700], FontAwesomeIcons.sitemap, 'The Services', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.deepPurple[400], FontAwesomeIcons.database, 'Data Dictionary', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.teal[300], FontAwesomeIcons.users, 'Participating Enterprises', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.amber[900], FontAwesomeIcons.whmcs, 'System Operations', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.limeAccent[400], FontAwesomeIcons.industry, 'Participating Industries', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
             ],
 
             staggeredTiles: const <StaggeredTile>[

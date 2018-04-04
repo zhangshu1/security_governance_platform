@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../Materials/MyDropDownButton.dart';
-import '../Materials/MyBand.dart';
-import '../Materials/ThreeColumnDataTable.dart';
+import '../../Materials/MyDropDownButton.dart';
+import '../../Materials/MyBand.dart';
+import '../../Materials/ThreeColumnDataTable.dart';
 
 void main() {
   runApp(new MaterialApp(

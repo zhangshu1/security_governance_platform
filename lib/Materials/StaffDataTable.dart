@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../Bean/Person.dart';
-import '../SecurityLeadershipTeam/LeadershipTeam.dart';
+import 'package:security_governance_platform/SecurityOrganization/SecurityLeadershipTeam/LeadershipTeam.dart';
 
 class TableItem {
   int rowNum;

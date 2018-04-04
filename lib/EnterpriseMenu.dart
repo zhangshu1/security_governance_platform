@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'Materials/Tile.dart';
+import 'BlankPage.dart';
+import 'package:security_governance_platform/SecurityOrganization/SecurityOrganization.dart';
 
 void main() => runApp(
   new MaterialApp(
@@ -46,12 +48,12 @@ class EnterpriseMenuState extends State<EnterpriseMenu>{
             mainAxisSpacing: 4.0,
             crossAxisSpacing: 4.0,
             children: <Widget>[
-              new TileItem(new Tile(Colors.blue, FontAwesomeIcons.user, 'Management and Control', null, null)),
-              new TileItem(new Tile(Colors.purple[400], FontAwesomeIcons.handshake, 'Partners', null, null)),
-              new TileItem(new Tile(Colors.green, FontAwesomeIcons.sitemap, 'Organizational Structure', null, null)),
-              new TileItem(new Tile(Colors.yellow[700], FontAwesomeIcons.thList, 'Participating Industries', null, null)),
-              new TileItem(new Tile(Colors.grey, FontAwesomeIcons.mobileAlt, 'Products and Services', null, null)),
-              new TileItem(new Tile(Colors.red, FontAwesomeIcons.wrench, 'System Operations', null, null)),
+              new TileItem(new Tile(Colors.blue, FontAwesomeIcons.user, 'Management and Control', context, new MaterialPageRoute(builder: (_) => new SecurityOrganization()))),
+              new TileItem(new Tile(Colors.purple[400], FontAwesomeIcons.handshake, 'Partners', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.green, FontAwesomeIcons.sitemap, 'Organizational Structure', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.yellow[700], FontAwesomeIcons.thList, 'Participating Industries', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.grey, FontAwesomeIcons.mobileAlt, 'Products and Services', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.red, FontAwesomeIcons.wrench, 'System Operations', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
             ],
 
             staggeredTiles: const <StaggeredTile>[

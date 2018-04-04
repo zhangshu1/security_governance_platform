@@ -11,19 +11,27 @@ void main() => runApp(
   ),
 );
 
-class EnterpriseMenu extends StatelessWidget{
+class EnterpriseMenu extends StatefulWidget {
+  final String enterpriseName;
+  EnterpriseMenu({Key key, this.enterpriseName}) : super(key:key); //receive parameter from last page
+
+  @override
+  EnterpriseMenuState createState() => new EnterpriseMenuState(enterpriseName: enterpriseName);
+}
+
+class EnterpriseMenuState extends State<EnterpriseMenu>{
+  final String enterpriseName;
+  EnterpriseMenuState({Key key,this.enterpriseName});
 
   @override
   Widget build(BuildContext context) {
 
     final Size screenSize = MediaQuery.of(context).size;
     final double distance = screenSize.width * 0.12;
-//    final double paddingVertical = screenSize.width * 0.08;
-//    final double paddingHorizontal = screenSize.width * 0.07;
 
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('The Enterprise', style: new TextStyle(color: Colors.white),),
+        title: new Text('$enterpriseName', style: new TextStyle(color: Colors.white),),
       ),
 
       backgroundColor: Colors.blue[100],

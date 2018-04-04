@@ -3,7 +3,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../Materials/Tile.dart';
 import 'package:security_governance_platform/SecurityOrganization/SecurityOperation/SecurityOperations.dart';
-import 'SecurityLeadershipTeam/SecurityOrganizationLeadership.dart';
+import 'SecurityLeadershipTeam/LeadershipMenu.dart';
 import 'Staff/Staff.dart';
 import '../BlankPage.dart';
 
@@ -42,7 +42,7 @@ class SecurityOrganization extends StatelessWidget{
               new TileItem(new Tile(Colors.green, FontAwesomeIcons.cube, 'Organization Structure', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
               new TileItem(new Tile(Colors.amber[700], FontAwesomeIcons.idBadge, 'Job/People', context, new MaterialPageRoute(builder: (_) => new Staff()))),
               new TileItem(new Tile(Colors.deepPurple, FontAwesomeIcons.users, 'Partners', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
-              new TileItem(new Tile(Colors.lightBlue[600], FontAwesomeIcons.train, 'Security Leadership Team', context, new MaterialPageRoute(builder: (_) => new SecurityOrganizationLeadership()))),
+              new TileItem(new Tile(Colors.lightBlue[600], FontAwesomeIcons.train, 'Security Leadership Team', context, new MaterialPageRoute(builder: (_) => new LeadershipMenu()))),
               new TileItem(new Tile(Colors.deepOrangeAccent, FontAwesomeIcons.infoCircle, 'Security Operations', context, new MaterialPageRoute(builder: (_) => new SecurityOperations()))),
               new TileItem(new Tile(Colors.green, FontAwesomeIcons.ambulance, 'Compliance Operations', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
             ],

@@ -4,8 +4,9 @@ import '../../Materials/Tile.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:security_governance_platform/SecurityOrganization/SecurityLeadershipTeam/RiskManagementAgenda.dart';
 import '../../BlankPage.dart';
+import 'LeadershipTeam.dart';
 
-class SecurityOrganizationLeadership extends StatelessWidget {
+class LeadershipMenu extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class SecurityOrganizationLeadership extends StatelessWidget {
             mainAxisSpacing: 4.0,
             crossAxisSpacing: 4.0,
             children: <Widget>[
-              new TileItem(new Tile(Colors.blue, FontAwesomeIcons.userCircle, 'Leadership Team', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
+              new TileItem(new Tile(Colors.blue, FontAwesomeIcons.userCircle, 'Leadership Team', context, new MaterialPageRoute(builder: (_) => new LeadershipTeam()))),
               new TileItem(new Tile(Colors.orange, FontAwesomeIcons.save, 'Risk Management Agenda', context, new MaterialPageRoute(builder: (_) => new RiskManagementAgenda()))),
               new TileItem(new Tile(Colors.yellow[800], FontAwesomeIcons.handPeace, 'Compliance Agenda', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),
               new TileItem(new Tile(Colors.deepPurple[400], FontAwesomeIcons.thLarge, 'Strategic Agenda', context, new MaterialPageRoute(builder: (_) => new BlankPage()))),

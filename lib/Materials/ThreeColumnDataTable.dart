@@ -28,9 +28,9 @@ class ThreeColumnDataTable extends StatelessWidget {
           //head row
           new Table(
             columnWidths: const <int, TableColumnWidth> {
-              0: const FixedColumnWidth(150.0),
-              1: const FixedColumnWidth(150.0),
-              2: const FixedColumnWidth(150.0),
+              0: const FixedColumnWidth(110.0),
+              1: const FixedColumnWidth(120.0),
+              2: const FixedColumnWidth(180.0),
             },
             children: [
               new TableRow(

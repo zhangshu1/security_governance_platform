@@ -38,7 +38,7 @@ class TwoColumnDataTable extends StatelessWidget {
           //content
           new Table(
             columnWidths: const <int, TableColumnWidth> {
-              0: const FixedColumnWidth(200.0),
+              0: const FixedColumnWidth(150.0),
               1: const FixedColumnWidth(200.0),
             },
             children: new List.generate(rowNum, (int index) {
